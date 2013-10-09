@@ -1,0 +1,358 @@
+body{
+	
+	padding-top: 60px;
+	-webkit-font-smoothing: antialiased!important;
+	
+	//background: url(../images/coke.png);
+	background: url(../images/we.jpg);
+	
+	@media only screen and (min-width: 320px) {
+
+	  /* Small screen, non-retina */
+	}
+
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
+	only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
+	only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
+	only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
+	only screen and (                min-resolution: 192dpi) and (min-width: 320px),
+	only screen and (                min-resolution: 2dppx)  and (min-width: 320px) { 
+
+	  /* Small screen, retina, stuff to override above media query */
+			
+	}
+
+	@media only screen and (min-width: 700px) {
+
+	  /* Medium screen, non-retina */
+		
+	}
+
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 700px),
+	only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 700px),
+	only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 700px),
+	only screen and (        min-device-pixel-ratio: 2)      and (min-width: 700px),
+	only screen and (                min-resolution: 192dpi) and (min-width: 700px),
+	only screen and (                min-resolution: 2dppx)  and (min-width: 700px) { 
+
+	  /* Medium screen, retina, stuff to override above media query */
+
+	}
+
+	@media only screen and (min-width: 1300px) {
+
+	  /* Large screen, non-retina */
+	
+
+	}
+
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1300px),
+	only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1300px),
+	only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1300px),
+	only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1300px),
+	only screen and (                min-resolution: 192dpi) and (min-width: 1300px),
+	only screen and (                min-resolution: 2dppx)  and (min-width: 1300px) { 
+
+	  /* Large screen, retina, stuff to override above media query */
+ 
+	}	
+	
+	
+}
+
+@text-shadow-color : rgba(0,0,0,0.7);
+
+
+//++++++Customizing NavBar ++++++////
+.navbar-inner {
+  background-color: #000;
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+
+  border: 1px solid #000;
+}
+.navbar-inner.bottom {
+  background-color: rgba(0,0,0, 0.7);
+}
+
+.navbar .brand {
+  color: #fff;
+  text-shadow: 0 1px 0 @text-shadow-color;
+}
+
+// Plain text in topbar
+// -------------------------
+.navbar-text {
+  margin-bottom: 0;
+  color: #fff;
+  text-shadow: 0 1px 0 @text-shadow-color;
+}
+
+// Janky solution for now to account for links outside the .nav
+// -------------------------
+.navbar-link {
+  color: #fff;
+  &:hover {
+    color: darken(#fff, 5%);
+  }
+}
+
+// Links
+.navbar .nav > li > a {
+  float: none;
+  // Vertically center the text given @navbarHeight
+  //padding: ((@navbarHeight - @baseLineHeight) / 2) 15px ((@navbarHeight - @baseLineHeight) / 2);
+  color: #fff;
+  text-shadow: 0 1px 0 @text-shadow-color;
+}
+
+// Hover
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+  color: #fff;
+}
+
+// Active nav items
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  color: #fff;
+}
+
+//+++++++++++++++++++++++++////
+
+.section{
+	
+	@media (min-width: 1025px) { 
+	 	margin-top: 14%;
+		width: auto;
+		overflow: auto;		
+	}
+	
+	@media (min-width: 768px) and (max-width: 1024px) and (orientation:landscape){		
+		margin-top: 15%;
+		width: auto;
+		overflow: auto;		
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) and (orientation:portrait){		
+		margin-top: 35%;
+		margin-bottom: 32%;
+		width: auto;
+		overflow: auto;		
+	}
+
+	
+	.section-textbackground{
+		background: rgba(0,0,0, 0.8);
+		color: white;
+		text-shadow: 1px 1px @text-shadow-color;
+		padding: 10px;
+		border-radius:3px;
+		
+		@media (max-width: 480px) {
+	
+		}
+		
+	}	
+	
+	.section-title{
+		text-transform:capitalize;
+		font-size:36px;
+
+		@media (min-width: 768px) and (max-width: 1024px) and (orientation:landscape){			
+		  font-size: 30px;
+		}
+		
+		@media (min-width: 768px) and (max-width: 1024px) and (orientation:portrait){			
+		  font-size: 26px;
+		}
+		
+		@media(max-width:480px)
+		{
+			font-size:20px;
+			line-height: 20px;
+		}
+	}
+	.section-description{
+		font-size:22px;
+		line-height: 28px;
+		
+		@media (min-width: 768px) and (max-width: 1024px) and (orientation:landscape){			
+			font-size: 20px;
+		}
+		
+		@media (min-width: 768px) and (max-width: 1024px) and (orientation:portrait){
+			font-size: 20px;
+		}
+		
+		@media(max-width:480px)
+		{
+			font-size:14px;
+			line-height: 18px;
+		}
+	}
+	
+	.section-form{ 
+		
+		//background: yellow;
+		text-align: center;
+		padding: 10px;
+		position: relative;
+		
+		padding-top: 5px;
+		
+		@media (min-width: 979px) {
+		 	//margin-top: 20px;	
+		
+		//padding-top: 0;
+		margin-top:-15px;
+		}
+		
+		.onTop{
+			z-index: 200000;
+			position: absolute;
+			top: 60px;
+			left: 5px;
+			width: inherit;
+		}
+		
+		.inactive{
+			width: 100%;
+			height: 100%;
+			background: darken(rgba(255,255,255,0.6), 15%);
+		}
+		
+					
+		form fieldset legend{
+			border: none;
+			color: white;
+			text-shadow: 1px 1px @text-shadow-color;	
+		}
+		
+		input {
+			height: 42px;
+			padding: 11px 10px 8px;
+			background: white;
+			background: rgba(255, 255, 255, 0.5);
+			border: 1px solid #333;
+			border-color: rgba(0, 0, 0, 0.6);
+			font-size: 18px; 
+			line-height: 21px;
+			color: black;
+			text-shadow: 0 1px rgba(255, 255, 255, 0.2);
+			-webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.3),0 1px rgba(255, 255, 255, 0.2);
+			-moz-box-shadow: inset 0 1px rgba(0,0,0,0.3),0 1px rgba(255,255,255,0.2);
+			box-shadow: inset 0 1px rgba(0, 0, 0, 0.3),0 1px rgba(255, 255, 255, 0.2);
+			border-radius:3px;
+		}
+		input::-webkit-input-placeholder{
+			color:darken(#eeeeee, 50%);
+		}
+		input:-moz-placeholder{
+			color:darken(#eeeeee, 50%);
+		}
+		input::-moz-placeholder{
+			color:darken(#eeeeee, 50%);
+		}
+		input:-ms-input-placeholder{
+			color:darken(#eeeeee, 50%);
+		}
+		.button.chunky {
+			height: 42px;
+			padding: 10px 17px 7px;
+			font-size: 18px;
+			border: 1px solid #1A1A1A;
+			border-radius:3px;
+		}
+
+	}
+	
+	.help-block{
+		display: none;
+		color: white;
+		text-shadow: 1px 1px @text-shadow-color;
+	}
+		
+	.section-feedback{
+		display:block;
+		text-decoration:underline;
+	}
+	
+	.section-block{
+		display: block;
+		width: 100%;
+		margin: 25px auto;
+	}
+}
+
+.fix-center{
+	text-align:center;
+	//width:100%;
+	//margin:0 auto;
+}
+
+.social-title{
+	//font-size: 20px;
+   @media (min-width:979px)	{
+		padding-top: 3px;
+		height: 15px;
+	}	
+}
+
+.btn-custom{
+	background-color:hsl(74,98%,80%) !important;
+	background-repeat: repeat-x;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#a4c406", endColorstr="#9ac904");
+	background-image: -khtml-gradient(linear, left top, left bottom, from(#a4c406) to(#9ac904));
+	background-image: -moz-linear-gradient(top, #a4c406,#9ac904);
+	background-image: -ms-linear-gradient(top, #a4c406,#9ac904);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a4c406), color-stop(100%,#9ac904));
+	background-image: -o-linear-gradient(top, #a4c406,#9ac904);
+	background-image: linear-gradient(#a4c406,#9ac904);
+	border-color: #779110 #779110 hsl(72,89%,57%);
+	color: #fff !important;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.52);
+	-webkit-font-smoothing: antialiased;
+	
+	font-weight: bolder;
+}
+
+h3{
+	@media (max-width:480px){
+		font-size:22.5px;
+		line-height:28px
+	}
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation:landscape){	
+
+	.section .span2{
+		width: 110px;
+	}
+	.section .span5{
+		width: 400px;
+	}
+	.section .span3{
+		width: 270px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation:portrait){		
+
+	.section .span2{
+		width: 20px;
+	}
+	.section .span5{
+		width: 350px;
+	}
+	.section .span3{
+		width: 270px;
+	}
+	
+}	
